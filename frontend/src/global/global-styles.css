@@ -1,0 +1,25 @@
+/* Global CSS Variables instantiation */
+
+:root {
+  /* colors */
+  --bg-color-main: #FAFAFA;
+  --bg-color-form: #FFF;
+  --text-color-main: #212121;
+  --text-color-form: #000;
+  --button-text-color: #212121;
+  --button-disabled-text-color: #999;
+  --button-border-color: #616161;
+  --button-disabled-border-color: #999;
+  --button-hover-color: #DADADA;
+  --form-bg-color: #FFF;
+  --form-border-color: #212121;
+  --form-text-color: #212121;
+  --form-focus-border-color: #212121;
+  --help-bg-color: rgba(250, 250, 250, .7);
+  --palette-border: #757575;
+  --search-field-bg: #fff;
+  --search-field-border: #ddd;
+  /* time */
+  --animation-time: .07s;
+  --spinner-time: 2s;
+}

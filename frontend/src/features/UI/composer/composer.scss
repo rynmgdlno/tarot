@@ -1,0 +1,13 @@
+.composer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc((var(--vh, 1vh) * 100) - 54px);
+}
+
+@media screen and (orientation: landscape) {
+  .composer {
+    flex-direction: row;
+  }
+}

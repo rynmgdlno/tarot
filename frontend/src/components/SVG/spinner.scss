@@ -1,0 +1,18 @@
+.spinner {
+  animation: rotate var(--spinner-time) reverse infinite ease-in-out;
+}
+
+.search-spinner {
+  width: 30px;
+  margin-left: 0.5rem;
+  fill: var(--text-color-main);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}

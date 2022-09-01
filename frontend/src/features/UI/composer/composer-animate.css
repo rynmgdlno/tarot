@@ -1,0 +1,27 @@
+.composer-animate {
+  animation: composer-animate var(--animation-time) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes composer-animate {
+  from {
+    width: 100vw;
+  }
+  to {
+    width: calc(100vw - 54px);
+  }
+}
+
+.composer-animate-return {
+  animation: composer-animate-return var(--animation-time) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes composer-animate-return {
+  from {
+    width: calc(100vw - 54px);
+  }
+  to {
+    width: 100vw;
+  }
+}

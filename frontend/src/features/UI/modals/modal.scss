@@ -1,0 +1,37 @@
+.modal {
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100vw - 56px);
+  height: calc((var(--vh, 1vh) * 100) - 56px);
+  opacity: 1;
+  background-color: var(--bg-color-main);
+  // border-top-right-radius: 20px;
+
+  .close-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: center;
+    width: 81%;
+  }
+
+  .modal-button {
+    width: 80%;
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .modal {
+    left: none;
+    right: 0;
+    width: 350px;
+  }
+}

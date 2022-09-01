@@ -1,0 +1,52 @@
+/* .modal-animate-off {
+  left: -100%;
+  display: none;
+} */
+
+.modal-animate {
+  animation: modal-animate var(--animation-time) ease-in;
+  animation-fill-mode: forwards;
+}
+
+.modal-animate-return {
+  animation: modal-animate-return var(--animation-time) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes modal-animate-return {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes modal-animate {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  @keyframes modal-animate {
+    from {
+      left: 100%;
+    }
+    to {
+      left: calc(100% - 406px);
+    }
+  }
+  
+  @keyframes modal-animate-return {
+    from {
+      left: calc(100% - 406px);
+    }
+    to {
+      left: 100%;
+    }
+  }
+}

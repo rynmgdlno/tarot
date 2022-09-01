@@ -1,0 +1,39 @@
+input[type=text],
+input[type=email],
+input[type=password] {
+  appearance: none;
+  border-radius: 0%;
+  height: 30px;
+  border: 1px solid var(--form-border-color);
+  color: var(--form-text-color);
+  background-color: var(--form-bg-color);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 0 .5rem;
+
+  &:focus {
+    border: 1px solid var(--form-focus-border-color);
+    outline: none;
+  }
+
+  &.alert {
+    border-color: red;
+  }
+  
+  &.search {
+    transition: all var(--animation-time) ease-in-out;
+    position: absolute;
+    left: 10px;
+    margin-bottom: 0;
+    width: 45%;
+    opacity: 1;
+    border: 1px solid var(--search-field-border);
+    background-color: var(--search-field-bg);
+
+    &.search-active {
+      left: -110px;
+      width: 0%;
+      opacity: 0;
+    }
+  }
+}

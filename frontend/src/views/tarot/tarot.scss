@@ -1,0 +1,10 @@
+.primary {
+  width: 100vw;
+  
+  .secondary {
+    width: 100vw;
+    // height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+  }
+}
+

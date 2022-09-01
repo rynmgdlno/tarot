@@ -1,0 +1,52 @@
+.color-animate {
+  animation: color-animate var(--animation-time) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes color-animate {
+  from {
+    height: 20%;
+  }
+  to {
+    height: 14%;
+  }
+}
+
+.color-animate-return {
+  animation: color-animate-return var(--animation-time) ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes color-animate-return {
+  from {
+    height: 14%;
+  }
+  to {
+    height: 20%;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  @keyframes color-animate {
+    from {
+      height: 100%;
+    }
+    to {
+      height: 80%;
+    }
+  }
+  
+  .color-animate-return {
+    animation: color-animate-return var(--animation-time) ease-in;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes color-animate-return {
+    from {
+      height: 80%;
+    }
+    to {
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+button {
+  transition: all var(--animation-time) ease-in-out;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border: 1px solid var(--button-border-color);
+  color: var(--button-text-color);
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding: .5rem;
+
+  &:disabled {
+    opacity: .5;
+    cursor: default;
+  }
+}
+
+.account-button {
+  width: 80%;
+
+  &:hover {
+    background-color: var(--button-hover-color);
+  }
+}
+
+// TODO: find out what you were thinking here:
+.afm-btn {
+  background-color: grey;
+}
+
+.basic-button {
+  border: none;
+  margin-left: auto;
+}
+
+.close-button {
+  font-size: .8rem;
+  border: 1px solid var(--button-border-color);
+  padding: .3rem;
+  margin-top: 1rem;
+
+  &:hover {
+    background-color: var(--button-hover-color);
+  }
+}
+
+.dots {
+  border: none;
+  margin: 0;
+  padding: 0;
+  opacity: .7;
+}
+
+.disabled-button {
+  border-color: var(--button-disabled-border-color);
+  color: var(--button-disabled-text-color);
+  cursor: default;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: var(--button-hover-color);
+  }
+}
+
+.menu-button {
+  margin-top: 1vh;
+  margin-bottom: 1.5vh;
+  border: none;
+}
+
+.palette-button {
+  width: 100px;
+  margin: 0;
+  border: none;
+  text-align: right;
+}
+
+.search-button {
+  transition: all var(--animation-time) ease-in-out;
+  position: absolute;
+  left: 0;
+  margin: 0 16px;
+  padding: 0;
+  border: none;
+  z-index: 999;
+
+  &.search-active {
+    left: -40px;
+  }
+}

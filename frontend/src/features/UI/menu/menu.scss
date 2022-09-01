@@ -1,0 +1,12 @@
+.menu {
+  position: fixed;
+  right: 0;
+  transform: translate3d(54px, 0, 0);
+  width: 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--bg-color-main);
+  z-index: 999;
+}
+

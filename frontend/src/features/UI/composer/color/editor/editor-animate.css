@@ -1,0 +1,65 @@
+.editor-animate-off {
+  display: none;
+  /* bottom: -30%; */
+}
+
+.editor-animate {
+  animation: editor-animate var(--animation-time) ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes editor-animate {
+  from {
+    bottom: -30%;
+  }
+
+  to {
+    bottom: 0;
+  }
+}
+
+.editor-animate-return {
+  animation: editor-animate-return var(--animation-time) ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes editor-animate-return {
+  0% {
+    bottom: 0;
+  }
+
+  100% {
+    bottom: -30%;
+  }
+}
+
+.animation-end {
+  visibility: hidden;
+}
+
+@media screen and (orientation: landscape) {
+  @keyframes editor-animate {
+    from {
+      bottom: -20%;
+    }
+  
+    to {
+      bottom: 0;
+    }
+  }
+  
+  .editor-animate-return {
+    animation: editor-animate-return var(--animation-time) ease-out;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes editor-animate-return {
+    0% {
+      bottom: 0;
+    }
+  
+    100% {
+      bottom: -20%;
+    }
+  }
+}
