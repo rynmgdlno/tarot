@@ -2,7 +2,9 @@ import random
 from io import BytesIO, StringIO
 
 from fastapi import Depends, FastAPI
-from fastapi.middleware.cors import CORSMiddleware
+# from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware import Middleware
+from starlette.middleware.cors import CORSMiddleware
 from PIL import Image
 from functools import lru_cache
 from . import config
