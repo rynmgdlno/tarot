@@ -10,6 +10,7 @@ from functools import lru_cache
 from . import config
 import httpx
 import asyncio
+import uvicorn
 
 
 app = FastAPI()
@@ -60,7 +61,6 @@ async def tarot(query: str = "autumn", page: int = 1, settings: config.Settings 
     URL = f"https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key={api_key}&tags={query}&page={page}&tag_mode=all&extras=url_s&per_page=20&format=json&nojsoncallback=1"
 
     response = requestSync(URL).json()
-    print(response)
     pages = response["photos"]["pages"]
     page = response["photos"]["page"]
     photos = response["photos"]["photo"]
@@ -107,3 +107,6 @@ async def tarot(query: str = "autumn", page: int = 1, settings: config.Settings 
         palettes.append(palette)
 
     return ([page, pages, palettes])
+
+if __name__ == "__main__":
+    uvicorn.run(app, port=3002, host="0.0.0.0")
