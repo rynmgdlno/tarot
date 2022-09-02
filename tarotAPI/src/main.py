@@ -108,5 +108,5 @@ async def tarot(query: str = "autumn", page: int = 1, settings: config.Settings 
 
     return ([page, pages, palettes])
 
-# if __name__ == "__main__":
-#     uvicorn.run(app, port=3002, host="0.0.0.0")
+if __name__ == "__main__":
+    uvicorn.run(app, port=3002, host="0.0.0.0")
