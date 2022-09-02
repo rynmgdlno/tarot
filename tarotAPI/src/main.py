@@ -79,8 +79,13 @@ async def tarot(query: str = "autumn", page: int = 1, settings: config.Settings 
                 tasks.append(asyncio.ensure_future(get_image(client, url)))
             except Exception as error:
                 continue
-        images = await asyncio.gather(*tasks)
+        temp_images = await asyncio.gather(*tasks)
 
+    for image in temp_images:
+        if image.mode == "RGB": 
+            images.append(image)
+
+    print(images)
     for image in images:
         # todo: redundant color data: reformat response shape
         # todo: (after making changes in frontend ofc):
@@ -88,6 +93,7 @@ async def tarot(query: str = "autumn", page: int = 1, settings: config.Settings 
         palette = []
         width, height = image.size
         # todo: make n colors adjustable:
+        print(image)
         while len(colors) < 5:
             try:
                 pixel = get_pixel(image, width, height)
