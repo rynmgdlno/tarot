@@ -6,10 +6,15 @@ import DATAReducer from '../features/DATA/DATAReducer'
 
 const env = process.env.REACT_APP_ENV
 
+const middleware = [];
+if (env === "development") {
+  middleware.push(logger)
+}
+
 export const store = configureStore({
   reducer: {
     ui: UIReducer,
     data: DATAReducer,
   },
-  middleware: env === 'development' && [logger],
+  middleware: middleware,
 });
